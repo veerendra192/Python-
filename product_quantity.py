@@ -10,14 +10,19 @@ products =[product1,product2,product3]
 for s in products:
     print(s)
 '''    
-
+344
 if(product1<=0) or (product2<=0) or (product3<=0):
     print("please enter +ve value")
 else:
     print("product quanity with price:")
     total=(product1*300+product2*500+product3*500)
     entries= {product1:300,product2:400,product3:500}
+
+    x=open("productData.txt","a")
+    print("entries ="entries,"total amount to be paid"total, file=x)
+
     for i,p in entries.items():
         print(i,p)
+        print(i,p,file=x)
     print("the amount u need to pay is :")     
     print(total)
