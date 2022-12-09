@@ -19,10 +19,11 @@ else:
     entries= {product1:300,product2:400,product3:500}
 
     x=open("productData.txt","a")
-    print("entries ="entries,"total amount to be paid"total, file=x)
+    print("the amount for total products")
+    print(entries,total, file=x)
 
     for i,p in entries.items():
         print(i,p)
         print(i,p,file=x)
     print("the amount u need to pay is :")     
-    print(total)
+    print(total,file=x)
